@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#app {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-height: 800px;
+    width: 90%;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.input-container input {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.input-container button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-self: center;
+}
+
+.todo-list {
+    list-style: none;
+    padding: 0;
+    align-items: center;
+}
+
+.todo-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+
+}
+
+
+
+
+.todo-list label {
+    position: relative;
+    padding-left: 30px; /* Create a custom checkbox-style square */
+    cursor: pointer;
+}
+
+.todo-list label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 4px;
+}
+
+.todo-list input[type="checkbox"]:checked + label::before {
+    background-color: #007BFF;
+    border: 2px solid #007BFF;
+}
+
+/* Red delete button */
+.todo-list button.removeTodo {
+    background-color: #ff5050;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 6px; /* Adjust padding for better appearance */
+    cursor: pointer;
+}
+
+/* Green complete button */
+.todo-list button.markAsCompleted {
+    background-color: #d3ffd3; /* Adjust to a light green color */
+    color: #28a745; /* Text color for completed tasks */
+    border: none;
+    border-radius: 4px;
+    padding: 3px 6px; /* Adjust padding for better appearance */
+    text-decoration: line-through; /* Text decoration for completed tasks */
+    cursor: pointer;
+}
+
